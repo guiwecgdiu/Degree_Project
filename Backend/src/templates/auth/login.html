@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block other_css %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+
+{% block content %}
+    <link href="{{ url_for('static', filename='style/css/login.css') }}" rel="stylesheet">
+
+    <div class="col-md-12">
+        <div class="sign_block">
+            <div>
+                <h1 class="i18n" name="signin">Sign In</h1>
+            </div>
+            {#       <div class="message">#}
+            {#                {% with messages = get_flashed_messages() %}#}
+            {#                    {% if messages %}#}
+            {#                    <ul>#}
+            {#                        {% for message in messages %}#}
+            {#                        <li>{{ message }}</li>#}
+            {#                        {% endfor %}#}
+            {#                    </ul>#}
+            {#                    {% endif %}#}
+            {#                {% endwith %}#}
+            {#       </div>#}
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <div>
+                    <p class="sign_text">
+                        {#                            {{ form.username.label }}#}
+                        <label class="i18n" name="username">username</label>
+                        {{ form.username(size=32) }}
+
+                        {% for error in form.username.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div>
+                    <p class="sign_text">
+                        {#                            {{ form.password.label }}#}
+                        <label class="i18n" name="password">password</label>
+                        {{ form.password(size=32) }}
+
+                        {% for error in form.password.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="check_box">
+
+                    {#                        <p class="sign_remember">{{ form.remember_me() }} {{ form.remember_me.label }}</p>#}
+                    <div class="sign_remember"><label class="i18n" name="remember">Remember
+                        me</label>{{ form.remember_me() }} </div>
+
+                </div>
+                <div>
+                    <p class="sign_submit">
+                        <button class="i18n" id="submit" name="login" type="submit">Login</button>
+                    </p>
+                </div>
+            </form>
+            <div class="sign_reset">
+                <label class="i18n" name="forget">forget password?</label>
+                <a href="{{ url_for('auth.reset_password_request') }}" class="i18n" name="reset">reset
+                    password</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% if session.get("USERNAME") %}
+    {% extends "loggedin_base.html" %}
+{% else %}
+    {% extends "base.html" %}
+{% endif %}
+
+{% block other_css %}
+{#         <link href="{{ url_for('static', filename='style/singlePageTemplate.css') }}" rel="stylesheet">#}
+          <link href="{{ url_for('static', filename='style/singlePageTemplate.css') }}" rel="stylesheet">
+{% endblock %}
+{% block script %}
+    {#     <script src="{{ url_for('static', filename='script/fun_script/sidebarscript.js') }}"></script>#}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+    <section class="welcome" id="welcome">
+
+
+	  <h2 class="tagline" style="alignment: center"> Hello, <br><br> <span class="light">{{ session.get("USERNAME") }}</span></h2>
+	  <br>
+	  <br>
+	  <br>
+    <p class="tagline">Please Login to make appoinments for your pets</p>
+  </section>
+
+</div>
+
+  <footer>
+    <article class="footer_column">
+      <h3>How to Take Care of Your Pet</h3>
+         {% block content1 %}{% endblock %}
+      <a href="{{ url_for('static', filename='article.html') }}"><img src="{{ url_for('static', filename='images/pet.jpg') }}" alt="" width="400" height="200" class="cards"/></a>
+    </article>
+    <article class="footer_column">
+      <h3>How to Pet a Dog</h3>
+         {% block content2 %}{% endblock %}
+      <a href="{{ url_for('static', filename='article2.html') }}"><img src="{{ url_for('static', filename='images/timg.jpg') }}" alt="" width="400" height="200" class="cards"/></a>
+    </article>
+  </footer>
+
+
+
+    <section class="footer_banner" id="contact">
+        <p class="tagline">If you have not registered, please register here</p>
+        <div class="button" id="">register</div>
+    </section>
+     <div class="container-fluid">
+
+
+    </div>
+{% endblock %}

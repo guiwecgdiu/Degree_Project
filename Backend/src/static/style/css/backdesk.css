@@ -1,0 +1,29 @@
+
+html{
+    font-size: 14px;
+}
+
+.monthly_status tr td:nth-of-type(6), .monthly_status tr td:nth-of-type(7){
+    text-align: right;
+}
+.monthly_status_foot tr{
+    text-align: right;
+}
+@media(min-width: 768px){
+    .search_box{
+        width: 25% !important;
+        margin-bottom: 0px !important;
+    }
+}
+.orderList tr td:nth-of-type(2){
+    color: orange;
+}
+.orderList tr td:nth-of-type(6){
+    text-align: right;
+}
+.orderList tr td:nth-of-type(7){
+    text-align: center;
+}
+
+
+

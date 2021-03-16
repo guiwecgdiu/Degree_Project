@@ -1,0 +1,21 @@
+.blog_items {
+    background: palegreen;
+    height: auto;
+    padding: 20px;
+    width: 70%;
+    position: absolute;
+    top: 8%;
+    left: 25%;
+}
+
+
+.blog_item_bg{
+
+    width: inherit;
+    height: auto;
+    min-height: 200px;
+    background:#f3f3f3;
+    margin:30px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+
+}

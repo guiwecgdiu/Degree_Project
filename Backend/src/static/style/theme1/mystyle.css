@@ -1,0 +1,14 @@
+h1 {
+	color: blue;
+	background-color: yellow;
+	border: 1px dotted black;
+}
+
+h3 {
+	color: red;
+	background-color: lightblue;
+}
+
+p {
+	color: purple;
+}

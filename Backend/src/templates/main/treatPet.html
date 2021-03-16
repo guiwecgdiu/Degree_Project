@@ -1,0 +1,161 @@
+{% extends "loggedin_base.html" %}
+
+
+{% block script %}
+    <script src="{{ url_for('static',filename='script/dropzone.min.js') }}"></script>
+    {{ dropzone.config() }}
+{% endblock %}
+{% block other_css %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/dropzone.min.css',type="text/css") }}">
+    {{ dropzone.style('margin: 2px 0;border:2px dashed #0087F7; min-height: 10px') }}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='style/css/treatPet.css',type="text/css") }}">
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>#}
+{#<script src="{{ url_for('static', filename='script/jquery.min.js') }}"></script>#}
+{#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+<script src="{{ url_for('static', filename='script/bootstrap.min.js') }}"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>#}
+<script src="{{ url_for('static', filename='script/jquery.easing.min.js') }}"></script>
+<script src="{{ url_for('static',filename='script/treat_pet.js') }}"></script>
+{#    <div class="container-fluid">#}
+{#        <div class="row">#}
+{#            <div class="col-md-12">#}
+{#                <div class="row">#}
+{#                    <div class="col-md-12">#}
+{#                        <p>#}
+{#                            Upload Your Pet Detail Here:#}
+{#                            <br>#}
+{#                            Input your pet name#}
+{#                            <br>#}
+{#                            Input your pet age#}
+{#                            <br>#}
+{#                            Input your pet type#}
+{#                        </p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="row">#}
+{#                    <div class="col-md-4">#}
+{#                        <br>#}
+{#                        <br>#}
+{#                        <br>#}
+{#                    </div>#}
+{#                    <div class="col-md-8">#}
+{#                                                <p>Drop Pet Photo Here</p>#}
+{#                                                {{ dropzone.create(action='main.upload') }}#}
+{#                                                <form action="" method="post" enctype="multipart/form-data" novalidate>#}
+{#                                                    {{ form.hidden_tag() }}#}
+{#                                                    <div class="form-group">#}
+{#                                                        {{ form.petname.label }}<br>#}
+{#                                                        {{ form.petname(size=32) }}#}
+{##}
+{#                                                        {% for error in form.petname.errors %}#}
+{#                                                            <span style="color: red;">[{{ error }}]</span>#}
+{#                                                        {% endfor %}#}
+{#                                                    </div>#}
+{#                                                    <div class="form-group">#}
+{#                                                        {{ form.petage.label }}<br>#}
+{#                                                        {{ form.petage() }}#}
+{##}
+{#                                                        {% for error in form.petage.errors %}#}
+{#                                                            <span style="color: red;">[{{ error }}]</span>#}
+{#                                                        {% endfor %}#}
+{#                                                    </div>#}
+{#                                                    <div class="form-group">#}
+{#                                                        {{ form.pettype.label }}<br>#}
+{#                                                        {{ form.pettype() }}#}
+{##}
+{#                                                {% for error in form.pettype.errors %}#}
+{#                                                <span style="color: red;">[{{ error }}]</span>#}
+{#                                                {% endfor %}#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div class="form-group">#}
+{#                                                        {{ form.submit() }}#}
+{#                                                    </div>#}
+{#                                                </form>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+
+
+
+
+<div class="row" style="height: 700px">
+    <div class="col-md-12" style="text-align: -webkit-center;">
+
+
+
+        <div id="msform" style="max-width: 1200px">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active"><p class="i18n" name="choosetype">Choose type</p></li>
+                <li><p class="i18n" name="uploadpicture">Upload picture</p></li>
+                <li><p class="i18n" name="moreinformation">More information</p></li>
+            </ul>
+
+            <!-- fieldsets -->
+        <div class="fieldset">
+            <h2 class="fs-title"><p class="i18n" name="pettype">Pet Type</p></h2>
+                <div>
+                    <label style="display: inline-block;width: 40%;padding-right:4%"><img src="../static/images/cat.png" width="100%"><input name="pet_type" type="radio" value="cat" class="pet_type" checked/> </label>
+                    <label style="display: inline-block;width: 40%;padding-left: 4%"><img src="../static/images/dog.png" width="100%"> <input name="pet_type" type="radio" value="dog" class="pet_type"/> </label>
+                </div>
+<!--                </form>-->
+            <button type="button" name="next" class="next action-button" id="type_next"><p class="i18n" name="next">Next</p></button>
+        </div>
+        <div class="fieldset">
+                <h2 class="fs-title"><p class="i18n" name="petphoto">Pet Photo</p> </h2>
+{#                <h3 class="fs-subtitle">Drop Pet Photo Here</h3>#}
+                {{ dropzone.create(action='main.upload') }}
+            <button type="button" name="previous" class="previous action-button-previous"><p class="i18n" name="previous">Previous</p></button>
+            <button type="button" name="next" class="next action-button"><p class="i18n" name="next">Next</p></button>
+        </div>
+        <div class="fieldset">
+            <h2 class="fs-title"><p class="i18n" name="addmore">Add more information</p></h2>
+                <input type="text" name="name" placeholder="Pet Name" id="pet_name"/>
+                <select id="pet_age">
+                    <option value="<1"><1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value=">=10">>=10</option>
+                </select>
+            <button type="submit" name="submit" class="submit action-button" id="pet_submit"><p class="i18n" name="submit">Submit</p></button>
+        </div>
+        </div>
+{#        </form>#}
+    </div>
+</div>
+<script>
+     $(document).ready(function () {
+         pet=[];
+         $("#pet_submit").click(function () {
+             if($('#pet_name').val()===''){
+                 setTimeout("$('#pet_name').css('border','1px solid red')",100);
+                setTimeout("$('#pet_name').css('border','1px solid #ccc')",300);
+                setTimeout("$('#pet_name').css('border','1px solid red')",500);
+                setTimeout("$('#pet_name').css('border','1px solid #ccc')",700);
+             }
+             else {
+                 pet.push($('input[name="pet_type"]:checked').val());
+                 pet.push($('#pet_name').val());
+                 pet.push($('#pet_age').val());
+                 $.post('/main/upload', {'pet': pet}).done(function (data) {
+                     window.location.href = '/main/index';
+                 });
+             }
+             {#alert(pet);#}
+         });
+     });
+</script>
+{% endblock %}

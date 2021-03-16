@@ -1,0 +1,41 @@
+{% macro pet_card(pet,reservation) %}
+    <div class="col-md-4" style="padding-bottom: 10px">
+							<div class="card">
+								<h5 class="card-header">
+                                    {{ pet.petname }}
+								</h5>
+								<div class="card-body">
+									<p class="card-text">
+                                        <a href="{{ url_for('.get_pet_image',filename=pet.petimage) }}" target="_blank">
+										<img style="width: 100%" alt="{{ url_for('main.get_pet_image',filename=pet.petimage) }}" src="{{ url_for('main.get_pet_image',filename=pet.petimage) }}" />
+                                        </a>
+                                    </p>
+								</div>
+								<div class="card-footer">
+									<p class="i18n" name="petage" style="float: left">
+                                        Pet Age:</p><p> {{ pet.petage }}</p>
+                                    <p class="i18n" name="pettype2" style="float: left">
+                                        Pet Type:</p><p> {{ pet.pettype }}</p>
+{#                                    </p>#}
+{#                                    <p>#}
+                                        {% if reservation and reservation.state!="finished" %}
+                                            <p class="i18n" name="petstate" style="float: left">Pet State:</p><p>  {{ reservation.state }}</p>
+                                        {% else %}
+                                        <p class="i18n" name="petstate2">Pet State: healthy</p>
+                                        {% endif %}
+{#                                    </p>#}
+                                    <div class="row">
+
+                                        <div class="container">
+                                            <!-- Tombol untuk menampilkan modal-->
+                                           <a class="btn-danger i18n" name="delete">Delete</a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+
+{% endmacro %}

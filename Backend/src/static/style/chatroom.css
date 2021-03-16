@@ -1,0 +1,127 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  width: 100%;
+}
+
+section {
+  height: 100%;
+}
+
+header {
+  background-color: #35343A;
+  border-bottom: 1px solid;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+nav,
+.logo {
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li.active a {
+  color: #FFE400;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+
+
+nav ul li a,
+.logo {
+  padding: 20px;
+  color: #fff;
+}
+
+.cont {
+  height: 500px
+}
+
+.left,
+.right {
+  height: 100%;
+}
+
+.left {
+  position: relative;
+  float: left;
+  width: calc( 100% - 250px);
+  background-color: #242427;
+}
+
+.right {
+  background-color: #1D1D1D;
+  color: #fff;
+  float: right;
+  width: 250px;
+}
+
+.right .title {
+  font-weight: 400;
+  padding: 10px;
+  background-color: rgba(0,0,0,.1);
+}
+
+.user {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px 7px;
+  border-radius: 2px;
+  background-color: #171717;
+}
+.user:hover {
+  cursor: pointer;
+  background-color: #292929;
+}
+.user.active {
+  color: #fff;
+  background-color: #292929;
+}
+
+.left .chat {
+  position: relative;
+  height: calc( 100% - 50px );
+  box-sizing: border-box;
+  color: #fff;
+}
+.left .chat .wrap {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  height: 100%;
+  overflow: auto;
+}
+.left .input input{
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(255,255,255,.1);
+  outline: none;
+  border: none;
+  color: #ddd;
+}
+.left .input input:focus {
+  background-color: #222;
+}
+.msg {
+  margin: 10px 0;
+}
+.msg .name {
+  color: #FFE400;
+}

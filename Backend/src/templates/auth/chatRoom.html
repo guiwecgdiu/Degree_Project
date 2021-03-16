@@ -1,0 +1,90 @@
+{% extends "loggedin_base.html" %}
+
+
+{%  block other_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/chatroom.css') }}">
+{% endblock %}
+
+{% block script %}
+    <script>
+        var input = $('.left .input input');
+var msg = $('.left .msg');
+var Chat = new chatController();
+
+input.keypress(function(e) {
+  if (e.which == 13) {
+    Chat.processInput();
+  }
+});
+
+function chatController() {
+  this.processInput =  function(){
+    var txt = input.val();
+    input.val('');
+    var newMsg = msg.clone();
+    newMsg.find(".name").text('You');
+    newMsg.find(".text").text(txt);
+    msg.parent().append(newMsg);
+  };
+}
+
+    </script>
+{% endblock %}
+
+{% block content %}
+<section>
+<header>
+  <div class="logo">Get In Touch</div>
+  <nav role='navigation'>
+    <ul>
+      <li class='active'><a href="#">Chatroom</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="cont">
+  <div class="left">
+
+    <div class="chat">
+      <div class="wrap">
+        <div class="msg"><span class="name">Staff</span> : <span class="text">Welcome To Veterinary</span></div>
+      </div>
+    </div>
+    <div class="input">
+      <input type="text" placeholder='type here' />
+    </div>
+
+  </div>
+  <div class="right">
+    <div class="title">Contacts</div>
+    <ul class="users">
+      <li class="user active">All</li>
+      <li class="user">Person 1</li>
+      <li class="user">Person 2</li>
+      <li class="user">Person 3</li>
+    </ul>
+  </div>
+</div>
+    </section>
+
+<br>
+<br>
+{#   <br><br><br><br>#}
+{#    <h1>CHAT ROOM</h1>#}
+{#    <div class="main">#}
+{#        Input message:<br>#}
+{#        <input type="text" name="input_message" size="120" id="input">#}
+{#        <button type="submit" onclick="send()" id="send">Send</button><br>#}
+{#        <textarea cols="120" rows="10" id="content">content</textarea>#}
+{#    </div>#}
+{#    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>#}
+{##}
+{##}
+{#    <div id="chatbox"></div>#}
+{#    <button ONCLICK="start()">Rush B</button>#}
+{##}
+{#    </div>#}
+
+{% endblock %}

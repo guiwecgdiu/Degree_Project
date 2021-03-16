@@ -1,0 +1,8 @@
+.element_bg{
+    background:  #f3f3f3;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    elevation: higher;
+}

@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*body, p, div, ul, dl, ol, i, em, strong, b, form, h1, h2, h3, h4, h5, h6{font-size:12px;*/
+/*	font-family: 'Microsoft Yahei', serif;}*/
+ul, ol, dl {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+i, em {
+    font-style: normal;
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+input, textarea {
+    outline: none;
+    resize: none;
+}
+
+input {
+    border: 0;
+}
+body{
+		background-color: rgba(238,238,17,0.3);
+
+}
+p{
+	word-wrap:break-word
+}
+
+.nav {;
+    float: left
+}
+
+.nav li {
+    float: left;
+    padding: 0 20px 0 20px
+}
+
+.log li {
+    float: right;
+    padding: 0 20px 0 20px
+}
+

@@ -1,0 +1,57 @@
+
+
+html{
+    height: 100%;
+    width: 100%;
+    background: lightgray;
+}
+.main{
+     background: lightgray;
+    height: auto;
+    width: 80%;
+    position: absolute;
+    left: 20%;
+}
+body{
+    height: 100%;
+    width:100%;
+}
+
+footer{
+    width: 100%;
+    background: #3a3a3a;
+    height: 200px;
+    position: relative;
+    color: lightgrey;
+    top:200%;
+}
+
+.left_column{
+    width: 20%;
+    height: 100%;
+    border: solid;
+    margin-left: -20px;
+    padding:10px 20px 0px 25px;
+    z-index: 10;
+    background: #f3f3f3;
+    position: fixed;
+    left: 0%;
+    top: 10%;
+}
+
+
+.container{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top:10%;
+
+
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+
+
+
+
+

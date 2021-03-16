@@ -1,0 +1,30 @@
+.content{
+    position: relative;
+    left: 200px;
+    height: 100%;
+    width: 60%;
+    color: black;
+    padding: 20px;
+
+}
+
+.siteInfo {
+    background-color: #f3f3f3;
+    position: relative;
+    left: 80%;
+    top: -620px;
+    width: 15%;
+    color: cornflowerblue;
+    height: 600px;
+    padding: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+    width:90px;
+    height: 90px;
+}
+.input {
+    height: 400px;
+
+}

@@ -1,0 +1,49 @@
+#reset_request_block{
+    display: block;
+    background: rgba(0,0,0,.1);
+    border-radius: 12px;
+    /*width: 1200px;*/
+    padding: 4%;
+    margin: 0 auto 5% auto;
+    max-width: 700px;
+}
+#reset_request_text{
+    padding: 5%;
+    max-height: 40px;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 90%;
+    color: #000;
+    margin: auto;
+    display: block;
+}
+#reset_request_block button{
+    background: #BDCEFC;
+    border-radius: 25px;
+    width: 90%;
+    display: block;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    margin: auto;
+}
+
+.container{
+    padding-left: 0;
+    padding-right: 0;
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
+    max-width: 2000px;
+    width: 100%;
+    /*color: #a71d2a;*/
+}
+
+#reset_request_title{
+    display: block;
+    margin: 0px auto 20px auto;
+    font-size: 25px;
+}
