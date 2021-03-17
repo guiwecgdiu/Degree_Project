@@ -77,6 +77,7 @@
     ```
 
 2. 在 `/front/src/main.js` 中的 `new Vue()` 之前添加
+<<<<<<< HEAD
 
     ```javascript
     import ViewUI from 'view-design'
@@ -90,6 +91,28 @@
 [![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
 
 ## 参考
+=======
+
+    ```javascript
+    import ViewUI from 'view-design'
+    import 'view-design/dist/styles/iview.css'
+
+    Vue.use(ViewUI)
+    ```
+
+## 许可
+
+[![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
+
+## 参考
+
+- [vue document](https://cn.vuejs.org/v2/guide/)
+- [vue-cli guide](https://cli.vuejs.org/zh/guide/)
+- [View UI](https://www.iviewui.com/)
+- [flask document](https://dormousehole.readthedocs.io/en/latest/)
+- [如何安装 Node 开发环境？](https://v2ai.cn/linux/2018/11/11/LX-10.html)
+- [如何安装 Python 开发环境？](https://v2ai.cn/linux/2018/04/29/LX-2.html)
+>>>>>>> 791af7ba55889bf97128edeb0244c72b5139fd46
 
 - [vue document](https://cn.vuejs.org/v2/guide/)
 - [vue-cli guide](https://cli.vuejs.org/zh/guide/)
