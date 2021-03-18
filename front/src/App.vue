@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <h1>{{messageFromGetMethod}}</h1>
-        <h1>{{messageFromPostMethod}}</h1>
+<!--        <h1>{{messageFromPostMethod}}</h1>-->
     </div>
 </template>
 
